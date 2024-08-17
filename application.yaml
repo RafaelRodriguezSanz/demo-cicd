@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pingpong
+  name: demo-cicd
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-repo/pingpong'
-    path: helm/pingpong-chart
+    repoURL: 'https://github.com/RafaelRodriguezSanz/demo-cicd'
+    path: demo-cicd
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
